@@ -1,0 +1,25 @@
+// customize some Bootstrap variables
+$body-bg: #000415;
+$primary: #150093;
+
+.navtitle {
+  font-family: KoHo;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 62px;
+  color: #FFD89D;
+
+}
+
+.nav-link {
+  font-family: KoHo;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 31px;
+  color: #FFD89D;
+}
+
+// the ~ allows you to reference things in node_modules
+@import "~bootstrap/scss/bootstrap";
