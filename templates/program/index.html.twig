@@ -1,5 +1,6 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<h1>{{ website }} index</h1>
+    <h1>{{ website }} index</h1>
+    <a href="{{ path('program_show', {page: 5}) }}">Afficher la page 5</a>
 {% endblock %}
