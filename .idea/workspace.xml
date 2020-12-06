@@ -20,12 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91009792-b117-4078-9be8-964c9065bcad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/migrations/Version20201201175508.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Category.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Program.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/CategoryRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/ProgramRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20201206092914.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Program.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Program.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +154,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Ateliers/Semaine 11/atelier" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -181,7 +178,13 @@
       <workItem from="1606745919631" duration="11008000" />
       <workItem from="1606766951135" duration="3390000" />
       <workItem from="1606809446471" duration="8319000" />
-      <workItem from="1606830782633" duration="4206000" />
+      <workItem from="1606830782633" duration="4862000" />
+      <workItem from="1606853154849" duration="18000" />
+      <workItem from="1606919953680" duration="599000" />
+      <workItem from="1606995014065" duration="1224000" />
+      <workItem from="1607244410145" duration="24000" />
+      <workItem from="1607244450982" duration="29000" />
+      <workItem from="1607244504393" duration="2580000" />
     </task>
     <servers />
   </component>
@@ -202,19 +205,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="253" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606669838059">
-      <screen x="54" y="27" width="1866" height="1053" />
-    </state>
-    <state x="253" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/54.27.1866.1053@54.27.1866.1053" timestamp="1606669838059" />
-    <state x="80" y="310" width="937" height="568" key="NewPhpClassDialog" timestamp="1606669716153">
-      <screen x="54" y="27" width="1866" height="1053" />
-    </state>
-    <state x="80" y="310" width="937" height="568" key="NewPhpClassDialog/54.27.1866.1053@54.27.1866.1053" timestamp="1606669716153" />
-    <state x="791" y="235" width="381" height="644" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1606746598842">
-      <screen x="54" y="27" width="1866" height="1053" />
-    </state>
-    <state x="791" y="235" width="381" height="644" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/54.27.1866.1053@54.27.1866.1053" timestamp="1606746598842" />
   </component>
 </project>
