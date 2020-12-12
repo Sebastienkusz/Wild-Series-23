@@ -1,6 +1,10 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>{{ website }} </h1>
-    <a href="{{ path('program_index') }}">Afficher les programmes</a>
+    <h1>{{ website }}</h1>
+    <a href="{{ path('program_index') }}" class="text-secondary">Afficher les programmes</a>
+    <br>
+    <a href="{{ path('category_new') }}" class="text-secondary">Ajouter une nouvelle catégorie</a>
+    <br>
+    <a href="{{ path('program_new') }}" class="text-secondary">Ajouter un nouveau programme</a>
 {% endblock %}

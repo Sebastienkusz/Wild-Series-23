@@ -1,6 +1,11 @@
 // customize some Bootstrap variables
 $body-bg: #000415;
 $primary: #150093;
+$secondary: #d5a4e0;
+$paragraph-color: #ffc994;
+$nav-color: #FFD89D;
+$h1-color: #4c1d0c;
+$h2-color: #00b446;
 
 .navtitle {
   font-family: KoHo;
@@ -8,8 +13,7 @@ $primary: #150093;
   font-weight: bold;
   font-size: 48px;
   line-height: 62px;
-  color: #FFD89D;
-
+  color: $nav-color;
 }
 
 .nav-link {
@@ -18,7 +22,20 @@ $primary: #150093;
   font-weight: 600;
   font-size: 24px;
   line-height: 31px;
-  color: #FFD89D;
+  color: $nav-color;
+}
+
+h1 {
+  color: $h1-color;
+}
+
+h2 {
+  color: $h2-color;
+}
+
+p,
+label {
+  color: $paragraph-color;
 }
 
 // the ~ allows you to reference things in node_modules

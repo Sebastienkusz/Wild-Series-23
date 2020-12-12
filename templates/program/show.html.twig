@@ -14,7 +14,7 @@
                 <div>
                     <h2>{{ loop.index }} / Saison n° {{ season.number }} - Année : {{ season.year }}</h2>
                     {# Lien vers la fiche de la série : #}
-                    <a href="{{ path("program_season_show", { "program_id": program.id, "season_id": season.id }) }}">Voir la saison</a>
+                    <a href="{{ path("program_season_show", { "program_id": program.id, "season_id": season.id }) }}" class="text-secondary">Voir la saison</a>
                 </div>
             {% else %}
                 Aucune série trouvée.

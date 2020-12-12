@@ -1,0 +1,13 @@
+{# templates/category/new.html.twig #}
+
+{% extends "base.html.twig" %}
+
+{% block body %}
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <div class="my-custom-class-for-errors">
+        {{ form_errors(form) }}
+    </div>
+    <input type='submit' value='Add category'>
+    {{ form_end(form) }}
+{% endblock %}
