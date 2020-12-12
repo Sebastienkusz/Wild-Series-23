@@ -11,17 +11,8 @@
                     <h2>Saison n° {{ season.number }} - Année : {{ season.year }}</h2>
                     <p>{{ season.description }}</p>
 
-                    {% for episode in season.episodes %}
-                        <div>
-                            <h2>{{ loop.index }} / Episode n° {{ episode.number }} - {{ episode.title }}</h2>
-                            <p>{{ episode.synopsis }}</p>
-                            {# Lien vers la fiche de l'épisode de la série : #}
-                            <a href="{{ path("program_episode_show", { "program_id": program.id, "season_id": season.id, "episode_id": episode.id }) }}">Voir l'épisode</a>
-                        </div>
-                    {% else %}
-                        Aucune série trouvée.
-                    {% endfor %}
-
+                    <h2>Episode n° {{ episode.number }} - {{ episode.title }}</h2>
+                    <p>{{ episode.synopsis }}</p>
                 </div>
          </div>
     </div>

@@ -20,11 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91009792-b117-4078-9be8-964c9065bcad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/program/season_show.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/program/episode_show.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ProgramController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProgramController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Program.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Program.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/program/season_show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/program/season_show.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/program/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/program/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -191,7 +191,9 @@
       <workItem from="1607244504393" duration="3180000" />
       <workItem from="1607250095248" duration="13599000" />
       <workItem from="1607336686451" duration="3938000" />
-      <workItem from="1607370124446" duration="4421000" />
+      <workItem from="1607370124446" duration="5453000" />
+      <workItem from="1607421571319" duration="51000" />
+      <workItem from="1607778225978" duration="8414000" />
     </task>
     <servers />
   </component>
