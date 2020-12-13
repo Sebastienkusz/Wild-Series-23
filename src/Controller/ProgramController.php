@@ -51,7 +51,7 @@ class ProgramController extends AbstractController
         // Get date form HTTP request
         $form->handleRequest($request);
         // was the form submitted ?
-        if ($form->isSubmitted()) {
+        if ($form->isSubmitted() && $form->isValid()) {
             // Deal with the submitted data
             // Get the Entity Manager
             $entityManager = $this->getDoctrine()->getManager();

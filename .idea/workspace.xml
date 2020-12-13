@@ -20,26 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91009792-b117-4078-9be8-964c9065bcad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/EpisodeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/SeasonController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/EpisodeType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/SeasonType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/episode/_delete_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/episode/_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/episode/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/episode/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/episode/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/episode/show.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/season/_delete_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/season/_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/season/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/season/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/season/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/season/show.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/translation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ProgramController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProgramController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Program.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Program.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,6 +198,7 @@
       <workItem from="1607796957803" duration="5262000" />
       <workItem from="1607807770789" duration="60000" />
       <workItem from="1607864408968" duration="1334000" />
+      <workItem from="1607871098213" duration="4850000" />
     </task>
     <servers />
   </component>
