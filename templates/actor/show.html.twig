@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Actor{% endblock %}
+
+{% block body %}
+    <h1>Acteur : </h1>
+    <h2>{{ actor.name }}</h2>
+    {% for program in programs %}
+        <div>
+            <p>{{ loop.index }} / {{ program.title }} - Catégorie : {{ program.category.name }} -
+            {# Lien vers la fiche de la série : #}
+            <a href="{{ path("program_show", { id: program.id }) }}" class="text-secondary">Voir la fiche</a>
+            </p>
+        </div>
+    {% else %}
+        Aucune série trouvée.
+    {% endfor %}
+
+    <a href="{{ path('app_index') }}">
+        Retour à l'accueil
+    </a>
+{% endblock %}

@@ -20,12 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91009792-b117-4078-9be8-964c9065bcad" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/migrations/Version20201213165424.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/ActorController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Actor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/ActorRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/actor/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/actor/show.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/translation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ProgramController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProgramController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Category.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Program.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Program.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/_navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/_navbar.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/program/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/program/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,14 +161,16 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/actor" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/actor" />
       <recent name="$PROJECT_DIR$/templates/program" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/assets/images" />
@@ -198,7 +205,8 @@
       <workItem from="1607796957803" duration="5262000" />
       <workItem from="1607807770789" duration="60000" />
       <workItem from="1607864408968" duration="1334000" />
-      <workItem from="1607871098213" duration="4850000" />
+      <workItem from="1607871098213" duration="5202000" />
+      <workItem from="1607876810702" duration="8509000" />
     </task>
     <servers />
   </component>

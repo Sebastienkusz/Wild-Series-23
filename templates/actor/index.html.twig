@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Actor index{% endblock %}
+
+{% block body %}
+    <h1>Actor index</h1>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for actor in actors %}
+            <tr>
+                <td>{{ actor.id }}</td>
+                <td>{{ actor.name }}</td>
+                <td>
+                    <a href="{{ path('actor_show', {'id': actor.id}) }}">show</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
