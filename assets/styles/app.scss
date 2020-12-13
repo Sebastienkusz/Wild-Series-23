@@ -7,6 +7,9 @@ $nav-color: #FFD89D;
 $h1-color: #4c1d0c;
 $h2-color: #00b446;
 
+// the ~ allows you to reference things in node_modules
+@import "~bootstrap/scss/bootstrap";
+
 .navtitle {
   font-family: KoHo;
   font-style: normal;
@@ -38,5 +41,7 @@ label {
   color: $paragraph-color;
 }
 
-// the ~ allows you to reference things in node_modules
-@import "~bootstrap/scss/bootstrap";
+a,
+.btn-form {
+  color: $secondary;
+}
