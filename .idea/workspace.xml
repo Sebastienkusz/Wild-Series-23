@@ -20,9 +20,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91009792-b117-4078-9be8-964c9065bcad" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/migrations/Version20201225190725.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataFixtures/ActorFixtures.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataFixtures/CategoryFixtures.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataFixtures/EpisodeFixtures.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataFixtures/ProgramFixtures.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataFixtures/SeasonFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/wild-series.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/wild-series.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/ProgramType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ProgramType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201201175508.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201206092914.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201207090248.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201207093236.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201213165424.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Program.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Program.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,6 +158,9 @@
       <path value="$PROJECT_DIR$/vendor/symfony/options-resolver" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
       <path value="$PROJECT_DIR$/vendor/symfony/webpack-encore-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kyD0AYBSNcWh5evwfeXDrzRTjs" />
@@ -199,7 +220,17 @@
       <workItem from="1607864408968" duration="1334000" />
       <workItem from="1607871098213" duration="5202000" />
       <workItem from="1607876810702" duration="8509000" />
-      <workItem from="1607935967813" duration="4683000" />
+      <workItem from="1607935967813" duration="5213000" />
+      <workItem from="1607953518345" duration="1825000" />
+      <workItem from="1607973758771" duration="4078000" />
+      <workItem from="1608015488127" duration="4572000" />
+      <workItem from="1608122431530" duration="2078000" />
+      <workItem from="1608571243753" duration="650000" />
+      <workItem from="1608629348544" duration="7000" />
+      <workItem from="1608630243345" duration="641000" />
+      <workItem from="1608744259436" duration="3180000" />
+      <workItem from="1608910322586" duration="9242000" />
+      <workItem from="1608980815838" duration="6073000" />
     </task>
     <servers />
   </component>
