@@ -20,27 +20,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91009792-b117-4078-9be8-964c9065bcad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/migrations/Version20201225190725.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/ActorFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/CategoryFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/EpisodeFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/ProgramFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/SeasonFixtures.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/Mailer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/Slugify.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/wild-series.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/wild-series.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201201175508.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201206092914.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201207090248.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201207093236.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201213165424.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201225190725.php" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/Version20210102112000.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/EpisodeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/EpisodeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ProgramController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProgramController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/EpisodeFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/EpisodeFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/ProgramFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/ProgramFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Episode.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Episode.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Program.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Program.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ProgramType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ProgramType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/actor/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/actor/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/episode/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/episode/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/episode/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/episode/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/episode/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/episode/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/program/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/program/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/program/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/program/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/program/season_show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/program/season_show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/program/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/program/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,6 +166,25 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
       <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/vendor/league/uri-parser" />
+      <path value="$PROJECT_DIR$/vendor/league/uri" />
+      <path value="$PROJECT_DIR$/vendor/league/uri-interfaces" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/daverandom/libdns" />
+      <path value="$PROJECT_DIR$/vendor/kelunik/certificate" />
+      <path value="$PROJECT_DIR$/vendor/amphp/cache" />
+      <path value="$PROJECT_DIR$/vendor/amphp/serialization" />
+      <path value="$PROJECT_DIR$/vendor/amphp/sync" />
+      <path value="$PROJECT_DIR$/vendor/amphp/socket" />
+      <path value="$PROJECT_DIR$/vendor/amphp/dns" />
+      <path value="$PROJECT_DIR$/vendor/amphp/http" />
+      <path value="$PROJECT_DIR$/vendor/amphp/hpack" />
+      <path value="$PROJECT_DIR$/vendor/amphp/parser" />
+      <path value="$PROJECT_DIR$/vendor/amphp/http-client" />
+      <path value="$PROJECT_DIR$/vendor/amphp/windows-registry" />
+      <path value="$PROJECT_DIR$/vendor/amphp/amp" />
+      <path value="$PROJECT_DIR$/vendor/amphp/process" />
+      <path value="$PROJECT_DIR$/vendor/amphp/byte-stream" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kyD0AYBSNcWh5evwfeXDrzRTjs" />
@@ -176,7 +200,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Projets/Projet 3/Code/bordeaux-202009-php-project3-diets" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -231,6 +255,16 @@
       <workItem from="1608744259436" duration="3180000" />
       <workItem from="1608910322586" duration="9242000" />
       <workItem from="1608980815838" duration="6073000" />
+      <workItem from="1609005757596" duration="3887000" />
+      <workItem from="1609087655231" duration="1919000" />
+      <workItem from="1609177091243" duration="4448000" />
+      <workItem from="1609230772132" duration="6344000" />
+      <workItem from="1609315404463" duration="5017000" />
+      <workItem from="1609436459844" duration="8830000" />
+      <workItem from="1609583543336" duration="4262000" />
+      <workItem from="1609695921100" duration="1456000" />
+      <workItem from="1609697395887" duration="4021000" />
+      <workItem from="1609748571446" duration="6377000" />
     </task>
     <servers />
   </component>

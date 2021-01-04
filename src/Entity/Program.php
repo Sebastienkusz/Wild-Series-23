@@ -11,7 +11,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=ProgramRepository::class)
- * @Assert\EnableAutoMapping()
+ * Assert\EnableAutoMapping() --- BLOCAGE DE SLUG ---
  * @UniqueEntity(
  *     "title",
  *     message="ce titre existe déjà"
@@ -75,6 +75,11 @@ class Program
      */
     private $actors;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $slug;
+
     public function __construct()
     {
         $this->seasons = new ArrayCollection();
@@ -130,6 +135,18 @@ class Program
     public function setCategory(?Category $category): self
     {
         $this->category = $category;
+
+        return $this;
+    }
+
+    public function getSlug(): ?string
+    {
+        return $this->slug;
+    }
+
+    public function setSlug(string $slug): self
+    {
+        $this->slug = $slug;
 
         return $this;
     }
@@ -214,4 +231,5 @@ class Program
 
         return $this;
     }
+
 }

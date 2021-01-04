@@ -9,7 +9,7 @@
         <div>
             <p>{{ loop.index }} / {{ program.title }} - Catégorie : {{ program.category.name }} -
             {# Lien vers la fiche de la série : #}
-            <a href="{{ path("program_show", { id: program.id }) }}" class="text-secondary">Voir la fiche</a>
+            <a href="{{ path("program_show", { slug: program.slug }) }}" class="text-secondary">Voir la fiche</a>
             </p>
         </div>
     {% else %}
