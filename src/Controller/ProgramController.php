@@ -13,6 +13,8 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\Mime\Email;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
@@ -46,10 +48,13 @@ class ProgramController extends AbstractController
 
     /**
      * The controller for the category add form
-     * @Route ("/new", name="new", methods={"GET", "POST"})
+     * @Route ("/new", name="new")
      * @return Response
      */
-    public function new(Request $request, Slugify $slugify): Response
+    public function new(Request $request,
+                        Slugify $slugify,
+                        MailerInterface $mailer
+                        ): Response
     {
         $program = new Program();
         $form = $this->createForm(ProgramType::class, $program);
@@ -60,8 +65,15 @@ class ProgramController extends AbstractController
             $slug = $slugify->generate($program->getTitle());
             $program->setSlug($slug);
             $entityManager->persist($program);
-
             $entityManager->flush();
+
+            $email = (new Email())
+                ->from($this->getParameter('mailer_from'))
+                ->to('5929398673-baa061@inbox.mailtrap.io')
+                ->subject('Une nouvelle série vient d\'être publiée !')
+                ->html($this->renderView('/email/_newProgramEmail.html.twig', ['program' => $program]));
+
+            $mailer->send($email);
 
             return $this->redirectToRoute('program_index');
         }
