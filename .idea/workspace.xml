@@ -20,15 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91009792-b117-4078-9be8-964c9065bcad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/email/_newEpisodeEmail.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/email/_newProgramEmail.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/email/newEmail.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/CommentType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/EpisodeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/EpisodeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ProgramController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProgramController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Episode.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Episode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/_navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/_navbar.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/episode/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/episode/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/program/episode_show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/program/episode_show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +187,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/email" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -253,6 +257,9 @@
       <workItem from="1609697395887" duration="4021000" />
       <workItem from="1609748571446" duration="6377000" />
       <workItem from="1609840988088" duration="6839000" />
+      <workItem from="1609869186646" duration="2116000" />
+      <workItem from="1610204993454" duration="13293000" />
+      <workItem from="1610264715757" duration="1403000" />
     </task>
     <servers />
   </component>

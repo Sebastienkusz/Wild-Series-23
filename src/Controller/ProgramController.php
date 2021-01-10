@@ -4,9 +4,12 @@
 namespace App\Controller;
 
 
+use App\Entity\Comment;
 use App\Entity\Episode;
 use App\Entity\Program;
 use App\Entity\Season;
+use App\Entity\User;
+use App\Form\CommentType;
 use App\Form\ProgramType;
 use App\Service\Slugify;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
@@ -118,18 +121,47 @@ class ProgramController extends AbstractController
     /**
      * Getting an episode by id
      *
-     * @Route ("/{program_slug}/seasons/{season_number}/episodes/{episode_slug}", methods={"GET"}, name="episode_show")
+     * @Route ("/{program_slug}/seasons/{season_number}/episodes/{episode_slug}", methods={"GET", "POST"}, name="episode_show")
      * @ParamConverter ("program", class="App\Entity\Program", options={"mapping": {"program_slug": "slug"}})
      * @ParamConverter ("season", class="App\Entity\Season", options={"mapping": {"season_number": "number"}})
      * @ParamConverter ("episode", class="App\Entity\Episode", options={"mapping": {"episode_slug": "slug"}})
      * @return Response
      */
-    public function showEpisode(Program $program, Season $season, Episode $episode): Response
+    public function showEpisode(Program $program,
+                                Season $season,
+                                Episode $episode,
+                                Request $request
+                                ): Response
     {
+        $comment = new Comment();
+        $form = $this->createForm(CommentType::class, $comment);
+        $form->handleRequest($request);
+        $author = $this->getUser();
+
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $comment->setAuthor($author);
+            $comment->setEpisode($episode);
+            $entityManager->persist($comment);
+            $entityManager->flush();
+
+            return $this->redirectToRoute('program_episode_show',[
+                'program_slug' => $program->getSlug(),
+                'season_number' => $season->getNumber(),
+                'episode_slug' => $episode->getSlug(),
+            ]);
+        }
+
+        $comments = $this->getDoctrine()->getRepository(Comment::class)->findBy(['episode' => $episode]);
+
+
         return $this->render('program/episode_show.html.twig', [
             'program' => $program,
             'season' => $season,
             'episode' => $episode,
+            'comments' => $comments,
+            'form' => $form->createView(),
         ]);
     }
 

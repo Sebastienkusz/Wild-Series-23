@@ -6,6 +6,7 @@ $paragraph-color: #ffc994;
 $nav-color: #FFD89D;
 $h1-color: #4c1d0c;
 $h2-color: #00b446;
+$h3-color: #f32e2b;
 
 // the ~ allows you to reference things in node_modules
 @import "~bootstrap/scss/bootstrap";
@@ -34,6 +35,10 @@ h1 {
 
 h2 {
   color: $h2-color;
+}
+
+h3 {
+  color: $h3-color;
 }
 
 p,
