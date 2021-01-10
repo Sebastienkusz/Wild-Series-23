@@ -19,15 +19,18 @@ class UserFixtures extends Fixture
     public function load(ObjectManager $manager)
     {
         // Création d’un utilisateur de type “contributeur” (= auteur)
-        $contributor = new User();
-        $contributor->setEmail('contributor@monsite.com');
-        $contributor->setRoles(['ROLE_CONTRIBUTOR']);
-        $contributor->setPassword($this->passwordEncoder->encodePassword(
-            $contributor,
-            'contributorpassword'
-        ));
+        for ($i=0; $i<20; $i++) {
+            $contributor = new User();
+            $contributor->setEmail('contributor'. $i .'@monsite.com');
+            $contributor->setRoles(['ROLE_CONTRIBUTOR']);
+            $contributor->setPassword($this->passwordEncoder->encodePassword(
+                $contributor,
+                'contributorpassword'
+            ));
 
-        $manager->persist($contributor);
+            $manager->persist($contributor);
+            $this->addReference('contributor_' . $i, $contributor);
+        }
 
         // Création d’un utilisateur de type “administrateur”
         $admin = new User();
@@ -42,5 +45,10 @@ class UserFixtures extends Fixture
 
         // Sauvegarde des 2 nouveaux utilisateurs :
         $manager->flush();
+    }
+
+    public function getDependencies()
+    {
+        return [UserFixtures::class];
     }
 }

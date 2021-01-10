@@ -19,6 +19,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Email;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
 /**
  * @Route("/programs", name="program_")
@@ -67,6 +68,7 @@ class ProgramController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $slug = $slugify->generate($program->getTitle());
             $program->setSlug($slug);
+            $program->setOwner($this->getUser());
             $entityManager->persist($program);
             $entityManager->flush();
 
@@ -80,21 +82,58 @@ class ProgramController extends AbstractController
 
             return $this->redirectToRoute('program_index');
         }
-        // Render the form
         return $this->render('program/new.html.twig', [
             'form' => $form->createView(),
         ]);
     }
 
     /**
+     * @Route("/{program_slug}/edit", name="edit", methods={"GET", "POST"})
+     * @ParamConverter ("program", class="App\Entity\Program", options={"mapping": {"program_slug": "slug"}})
+     */
+    public function edit(Request $request,Slugify $slugify, MailerInterface $mailer, Program $program): Response
+    {
+        if(!($this->getUser() == $program->getOwner())) {
+            throw new AccessDeniedException('Only the owner can edit the program!');
+        }
+        $form = $this->createForm(ProgramType::class, $program);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $slug = $slugify->generate($program->getTitle());
+            $program->setSlug($slug);
+            $entityManager->persist($program);
+            $entityManager->flush();
+
+            $email = (new Email())
+                ->from($this->getParameter('mailer_from'))
+                ->to('5929398673-baa061@inbox.mailtrap.io')
+                ->subject('Une nouvelle série vient d\'être modifiée !')
+                ->html($this->renderView('/email/_editProgramEmail.html.twig', ['program' => $program]));
+
+            $mailer->send($email);
+
+            return $this->redirectToRoute('program_index');
+        }
+        return $this->render('program/edit.html.twig', [
+            'program' => $program,
+            'form' => $form->createView(),
+        ]);
+    }
+
+
+    /**
      * Getting a program by id
      *
-     * @Route("/{slug}", methods={"GET"}, name="show")
-
+     * @Route("/{program_slug}", methods={"GET"}, name="show")
+     * @ParamConverter ("program", class="App\Entity\Program", options={"mapping": {"program_slug": "slug"}})
      * @return Response
      */
     public function show(Program $program): Response
     {
+
+
         return $this->render('program/show.html.twig', [
             'program' => $program,
             'seasons' => $program->getSeasons(),
@@ -138,7 +177,6 @@ class ProgramController extends AbstractController
         $form->handleRequest($request);
         $author = $this->getUser();
 
-
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager = $this->getDoctrine()->getManager();
             $comment->setAuthor($author);
@@ -154,7 +192,6 @@ class ProgramController extends AbstractController
         }
 
         $comments = $this->getDoctrine()->getRepository(Comment::class)->findBy(['episode' => $episode]);
-
 
         return $this->render('program/episode_show.html.twig', [
             'program' => $program,

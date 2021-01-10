@@ -10,7 +10,11 @@
             <h2>{{ loop.index }} / {{ program.title }} - Catégorie : {{ program.category.name }}</h2>
             <p>{{ program.summary }}</p>
             {# Lien vers la fiche de la série : #}
-            <a href="{{ path("program_show", { slug: program.slug }) }}" class="text-secondary">Voir la fiche</a>
+            <a href="{{ path("program_show", { program_slug: program.slug }) }}" class="text-secondary">Voir la fiche</a>
+            {% if is_granted("ROLE_ADMIN") %}
+            -
+            <a href="{{ path("program_edit", { program_slug: program.slug }) }}" class="text-secondary">Modifier la fiche</a>
+            {% endif %}
         </div>
     {% else %}
         Aucune série trouvée.
