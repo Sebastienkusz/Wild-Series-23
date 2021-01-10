@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ton profil{% endblock %}
+
+{% block body %}
+    <h2>Et voici ta page, {{ app.user.email }}</h2>
+    <a class="nav-link" href="{{ path('app_logout') }}">Se déconnecter</a>
+    {% if programs is empty %}
+        <p>Tu n'as ajouté aucune série pour le moment. </p>
+    {% else %}
+        <p>Les séries que tu as ajouté :</p>
+        {% for program in programs %}
+            <ul>
+                <li>
+                    <a href="{{ path("program_show", { program_slug: program.slug }) }}">{{ program.title }}</a>
+                </li>
+            </ul>
+        {% endfor %}
+    {% endif %}
+{% endblock %}
