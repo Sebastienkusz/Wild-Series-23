@@ -13,6 +13,12 @@
 
                     <h2>Episode n° {{ episode.number }} - {{ episode.title }}</h2>
                     <p>{{ episode.synopsis }}</p>
+                    {% if is_granted("ROLE_ADMIN") %}
+                        -
+                        <a href="{{ path("episode_edit", { slug: episode.slug }) }}" class="text-secondary">Modifier la saison</a>
+                        -
+                        <a href="{{ path("episode_delete", { slug: episode.slug }) }}" class="text-secondary">Supprimer la saison</a>
+                    {% endif %}
                 </div>
             <div>
                 {% if app.user %}

@@ -17,6 +17,12 @@
                             <p>{{ episode.synopsis }}</p>
                             {# Lien vers la fiche de l'épisode de la série : #}
                             <a href="{{ path("program_episode_show", { "program_slug": program.slug, "season_number": season.number, "episode_slug": episode.slug }) }}" class="text-secondary">Voir l'épisode</a>
+                            {% if is_granted("ROLE_ADMIN") %}
+                            -
+                            <a href="{{ path("season_edit", { id: season.id }) }}" class="text-secondary">Modifier la saison</a>
+                            -
+                            <a href="{{ path("season_delete", { id: season.id }) }}" class="text-secondary">Supprimer la saison</a>
+                            {% endif %}
                         </div>
                     {% else %}
                         Aucune série trouvée.

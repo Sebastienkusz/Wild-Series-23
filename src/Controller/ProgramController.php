@@ -18,6 +18,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Email;
 use Symfony\Component\Routing\Annotation\Route;
@@ -37,13 +38,15 @@ class ProgramController extends AbstractController
 
     /**
      * Show all rows from Program's entity
-     *
      * @Route("/", name="index")
      * @return Response A response instance
      */
-    public function index(Request $request, ProgramRepository $programRepository): Response
+    public function index(Request $request, ProgramRepository $programRepository, SessionInterface $session): Response
     {
-
+        if (!$session->has('total')) {
+            $session->set('total', 0);
+        }
+        $total = $session->get('total');
 
         $form = $this->createForm(SearchProgramType::class);
         $form->handleRequest($request);
@@ -83,6 +86,8 @@ class ProgramController extends AbstractController
             $entityManager->persist($program);
             $entityManager->flush();
 
+            $this->addFlash('success', 'The new program has been created');
+
             $email = (new Email())
                 ->from($this->getParameter('mailer_from'))
                 ->to('5929398673-baa061@inbox.mailtrap.io')
@@ -94,6 +99,7 @@ class ProgramController extends AbstractController
             return $this->redirectToRoute('program_index');
         }
         return $this->render('program/new.html.twig', [
+            'program' => $program,
             'form' => $form->createView(),
         ]);
     }
@@ -116,6 +122,8 @@ class ProgramController extends AbstractController
             $program->setSlug($slug);
             $entityManager->persist($program);
             $entityManager->flush();
+
+            $this->addFlash('success', 'The program has been edited');
 
             $email = (new Email())
                 ->from($this->getParameter('mailer_from'))
