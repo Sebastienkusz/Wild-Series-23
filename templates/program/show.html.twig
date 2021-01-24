@@ -14,13 +14,13 @@
                 <div>
                     <h2>{{ loop.index }} / Saison n° {{ season.number }} - Année : {{ season.year }}</h2>
                     {# Lien vers la fiche de la série : #}
-                    <a href="{{ path("program_season_show", { "program_slug": program.slug, "season_number": season.number }) }}" class="text-secondary">Voir la saison</a>
+                    <a href="{{ path("program_season_show", { program_slug: program.slug, season_number: season.number }) }}" class="text-secondary">Voir la saison</a>
                 </div>
                 <strong>Acteurs :</strong>
                 <ul>
                     {% for actor in program.actors %}
                         <li>{{ actor.name }} -
-                            <a href="{{ path('actor_show', {'id': actor.id}) }}">lien de l'acteur</a>
+                            <a href="{{ path('actor_show', {id: actor.id}) }}">lien de l'acteur</a>
                         </li>
                     {% else %}
                         <li>Aucun acteur pour cette série</li>
